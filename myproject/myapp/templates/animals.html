@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Животные{% endblock %}
+{% block content %}
+
+    <h1>Животные</h1>
+    <nav>
+        <a href="#cats">Котики</a> |
+        <a href="#dogs">Собаки</a> |
+        <a href="#raccoons">Еноты</a> |
+        <a href="#hedgehogs">Ежики</a>
+    </nav>
+    <h2 id="cats">Кот</h2>
+    <img src="/static/images/cat.jpg" alt="Кот" width="300">
+    <p>Котики — самые милые создания на свете!</p>
+    <h2 id="dogs">Собака</h2>
+    <img src="/static/images/dog.jpg" alt="Собака" width="300">
+    <p>Собаки — лучшие друзья человека.</p>
+    <h2 id="raccoons">Енот</h2>
+    <img src="/static/images/raccoon.jpeg" alt="Енот" width="300">
+    <p>Еноты — маленькие хулиганы.</p>
+    <h2 id="hedgehogs">Еж</h2>
+    <img src="/static/images/hedgehog.jpg" alt="Ежик" width="300">
+    <p>Ежики — колючие, но очень милые.</p>
+
+    <a href="#top">В начало</a>
+{% endblock %}

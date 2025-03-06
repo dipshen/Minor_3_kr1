@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Задача 2{% endblock %}
+{% block content %}
+    <h1>Задача 2</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="a">Сторона a:</label>
+        <input type="number" step="0.01" id="a" name="a" value="{{ a }}" required><br>
+
+        <label for="b">Сторона b:</label>
+        <input type="number" step="0.01" id="b" name="b" value="{{ b }}" required><br>
+
+        <label for="c">Сторона c:</label>
+        <input type="number" step="0.01" id="c" name="c" value="{{ c }}" required><br>
+
+        <label for="d">Сторона d:</label>
+        <input type="number" step="0.01" id="d" name="d" value="{{ d }}" required><br>
+
+        <button type="submit">Проверить</button>
+    </form>
+
+    {% if result %}
+        <h2>Результат:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+
+{% endblock %}

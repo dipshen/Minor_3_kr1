@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Задача 1{% endblock %}
+{% block content %}
+
+    <h1>Задача 1</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="words">Слова (через запятую и пробел):</label>
+        <input type="text" id="words" name="words" value="{{ words }}"><br>
+        <label for="lengths">Длины слов (через пробел):</label>
+        <input type="text" id="lengths" name="lengths" value="{{ lengths }}"><br>
+        <button type="submit">Проверить</button>
+    </form>
+
+    {% if correct_words %}
+        <h2>Результаты проверки</h2>
+        <ul>
+            {% for word in correct_words %}
+                <li>{{ word }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p> </p>
+    {% endif %}
+
+{% endblock %}
